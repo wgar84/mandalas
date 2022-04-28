@@ -3,7 +3,7 @@ class Seed {
     constructor(center, radius, n_discs, radii) {
         this.discArray = [];
         this.centerDisc = new Disc(center, radius, 0, TWO_PI, n_discs);
-        let phase_offset = floor(random(1, 9));
+        let phase_offset = floor(random(1, 5));
         console.log(phase_offset);
         for (let i = 0; i < n_discs; i++) {
             let newCenter = this.centerDisc.image[i];
