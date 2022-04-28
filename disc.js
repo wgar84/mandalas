@@ -49,7 +49,7 @@ class Disc {
         noFill();
         strokeWeight(2);
         for(let i = 0; i < this.image.length; i++) {
-            let alpha = map(this.domain[i] * 2, 0, TWO_PI, 255, 0);
+            let alpha = map(this.domain[i], 0, TWO_PI, 200, 0);
             stroke(255, alpha);
             point(this.image[i].x, this.image[i].y);
         }
