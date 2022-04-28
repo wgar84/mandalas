@@ -9,7 +9,7 @@ function setup() {
   let center = createVector(width/2, height/2);
   phase = 0;
   // seed = new Disc(center, 100, 0, TWO_PI);
-  seed = new Seed(center, 80, 6, 80);
+  seed = new Seed(center, 80, 12, 80);
   // intersect = new Intersection(seed.discArray);
 }
 
@@ -19,7 +19,7 @@ function draw() {
     seed.discArray[i].traverse(seed.discArray[i].phase + phase);
   }
   seed.display();
-  phase += PI / 100;
+  phase += PI / 200;
   phase = phase % TWO_PI;
   // console.log(phase);
   // intersect.display();

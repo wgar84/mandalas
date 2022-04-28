@@ -20,8 +20,8 @@ class Disc {
 
         for(let theta = 0; theta <= size; theta += step) {
             this.domain.push(theta);
-            let x = this.radius * cos(-theta);
-            let y = this.radius * sin(-theta);
+            let x = this.radius * cos(theta);
+            let y = this.radius * sin(theta);
             let p = createVector(x, y);
             p.rotate(phase);
             p.add(this.center);
@@ -48,9 +48,10 @@ class Disc {
         // beginShape();
         noFill();
         strokeWeight(2);
+        colorMode(HSB, 100);
         for(let i = 0; i < this.image.length; i++) {
-            let alpha = map(this.domain[i], 0, TWO_PI, 200, 0);
-            stroke(255, alpha);
+            let hue = map(this.domain[i], 0, TWO_PI, 0, 100);
+            stroke(hue, 100, hue);
             point(this.image[i].x, this.image[i].y);
         }
         // endShape();
